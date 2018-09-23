@@ -3,6 +3,9 @@
  * 
  * 示例 1： 输入: "babad" 输出: "bab" 注意: "aba"也是一个有效答案。 示例 2： 输入: "cbbd" 输出: "bb"
  */
+/**
+ * 思路：在两两字符之间加入#号，
+ */
 class Solution {
     public String longestPalindrome(String s) {
         // 空串直接返回
