@@ -17,6 +17,20 @@
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
-        
+        ListNode p = head;
+        if(head==null || head.next==null) return head; // 只有一个节点
+        ListNode q = head.next, m = head.next.next;
+
+        head.next = null;
+        while(m != null){
+            q.next = p;
+            p = q;
+            q = m;
+            m = m.next;
+        }
+        q.next = p;
+        return q;
     }
 }
+
+
